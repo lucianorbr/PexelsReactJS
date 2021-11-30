@@ -2,6 +2,8 @@ import React from 'react'
 import axios from 'axios'
 import Styles from './styles/Photos.module.css'
 
+require('dotenv').config()
+
 
 class Photos extends React.Component {
   constructor(props) {
@@ -21,7 +23,7 @@ class Photos extends React.Component {
   handleClick = () => {
     axios.get(`https://api.pexels.com/v1/search`, {
       headers: {
-        authorization: "563492ad6f91700001000001da04ea502738477094338d8863225d50"
+        authorization: process.env.REACT_APP_API_KEY
       },
       params: {
         query: this.state.value,
@@ -37,7 +39,7 @@ class Photos extends React.Component {
   componentDidMount() {
     axios.get(`https://api.pexels.com/v1/search`, {
       headers: {
-        authorization: "563492ad6f91700001000001da04ea502738477094338d8863225d50"
+        authorization: process.env.REACT_APP_API_KEY
       },
       params: {
         query: "4k",
