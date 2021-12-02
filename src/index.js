@@ -4,8 +4,13 @@ import '../src/styles/index.css';
 import Photos from './Photos';
 
 
+
 ReactDOM.render(
-    <Photos />,
+
+
+    <Photos />, 
+
+
   document.getElementById('root')
 );
 

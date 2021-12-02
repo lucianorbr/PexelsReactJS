@@ -1,9 +1,10 @@
 import React from 'react'
 
+import { Container } from './styles';
+
 class Buttons extends React.Component{
     constructor(props){
         super(props)
-    
     }
 
     render(){

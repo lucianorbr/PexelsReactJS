@@ -1,29 +1,34 @@
 .main{
     position: relative;
+
 }
 
 .input_container{
-    position: fixed;
+    position: absolute;
     top: 0;
-    background-color: #2D4B2D;
+    /*background-color:#2D4B2D;*/
     color: white;
     width: 100%;
-    padding-bottom: 10px;
+    padding: 30px;
     z-index: 2;
+    height: 10px;
+
 }
 
 .input_container :nth-child(2){
     margin-left: 50px;
-    padding: 10px;
+    padding: 20px;
     font-size: large;
 
 }
 
 .input_container button{
-    margin-left: 10px;
+    margin-left: 400px;
     padding: 10px;
-    position: absolute;
-    font-size: large;
+    height: 55px;
+    /*position: absolute;*/
+
+    font-size: 24px;
     background-color: #1cb397;
     color: white;
     border-radius:3px;
@@ -31,6 +36,21 @@
     border: none;
     cursor:pointer;
     width: 250px;
+
+}
+
+.input_container input{
+
+    max-width: 260px;
+    width: 90%;
+    margin: auto;
+    background: #2D4B2D;
+    outline: 0;
+    border-radius: 6px;
+    padding: 12px 12px;
+
+
+
 }
 
 .input_container h1{
@@ -52,11 +72,10 @@
     z-index: 1;
 }
 .photo_container{
-    margin: 100px;
-    margin-top: 200px;
+    margin-top: 50px;
     display: flex;
     justify-content: center;
-    align-items: stretch;
+    align-items: inherit;
 }
 
 .photo_container div{

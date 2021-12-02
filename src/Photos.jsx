@@ -1,9 +1,12 @@
 import React from 'react'
 import axios from 'axios'
 import Styles from './styles/Photos.module.css'
+import Footer from './components/Footer'
+import { Container, PexelLogo, SearchForm, Button, input } from './components/Header/styles';
+import Buttons from './components/Button/Buttons';
+
 
 require('dotenv').config()
-
 
 class Photos extends React.Component {
   constructor(props) {
@@ -18,7 +21,7 @@ class Photos extends React.Component {
   }
 
   handleChange = (e) => {
-    this.setState({value: e.target.value})
+    this.setState({ value: e.target.value })
   }
   handleClick = () => {
     axios.get(`https://api.pexels.com/v1/search`, {
@@ -31,9 +34,7 @@ class Photos extends React.Component {
       }
     })
       .then(res => res.data.photos)
-      .then(res => this.setState({data: res})).catch(err => console.log(err))
-
-
+      .then(res => this.setState({ data: res })).catch(err => console.log(err))
   }
 
   componentDidMount() {
@@ -47,99 +48,129 @@ class Photos extends React.Component {
       }
     })
       .then(res => res.data.photos)
-      .then(res => this.setState({data: res})).catch(err => console.log(err))
+      .then(res => this.setState({ data: res })).catch(err => console.log(err))
   }
 
 
   render() {
-
     console.log(this.props)
     console.log(this.state.data)
-
-    const {data} = this.state
+    const { data } = this.state
 
     return (
-
       <div className={Styles.main}>
 
-        <div className={Styles.input_container}>
-          <h1>The best free stock photos</h1>
-          <input type="text" onChange={this.handleChange} value={this.state.value}placeholder="Search for free photos"></input>
-          <button type="button" onClick={this.handleClick}>Search</button>
-        </div>
+        <Container>
 
-        {/*<Buttons page={this.state.page} page_no={this.state.page_no}/>*/}
+          <SearchForm >
+
+            {/*<input*/}
+
+            {/*    onChange={this.handleChange}*/}
+            {/*    value={this.state.value}*/}
+            {/*    placeholder="Search for free photos..."*/}
+            {/*/>*/}
+
+
+
+            <div className={Styles.input_container}>
+
+              <input
+                  onChange={this.handleChange}
+                  value={this.state.value}
+                  placeholder="Search for free photos..."
+              />
+              <Button type="button" onClick={this.handleClick}>Search</Button>
+
+            </div>
+
+          </SearchForm>
+
+
+        </Container>
+
+        {/*<div className={Styles.input_container}>*/}
+        {/*  <h1>The best free stock photos</h1>*/}
+        {/*  <input type="text" onChange={this.handleChange} value={this.state.value} placeholder="Search for free photos"></input>*/}
+
+        {/*  <button type="button" onClick={this.handleClick}>Search</button>*/}
+        {/*</div>*/}
 
         <div className={Styles.photo_container}>
 
           <div className={Styles.flexContainer}>
+
             {data !== "" && data.map((item, i) => {
-                if (i <= Math.floor(this.state.page_no / 3)) {
-                  return (
+              if (i <= Math.floor(this.state.page_no / 3)) {
+                return (
 
-                    <div key={i} className={Styles.img}>
-                      <a href={item.src.original} target="_blank" rel="noopener noreferrer">
-                        <img className={Styles.img} width="100%" src={item.src.large} alt="img">
-                        </img>
+                  <div key={i} className={Styles.img}>
+                    <a href={item.src.original} target="_blank" rel="noopener noreferrer">
+                      <img className={Styles.img} width="100%" src={item.src.large} alt="img">
+                      </img>
+                    </a>
+                    <div className={Styles.details}>
+                      <a href={item.photographer_url} target="_blank" rel="noopener noreferrer">
+                        <h3>{item.photographer}</h3>
                       </a>
-                      <div className={Styles.details}>
-                        <a href={item.photographer_url} target="_blank" rel="noopener noreferrer">
-                          <h3>{item.photographer}</h3>
-                        </a>
-                      </div>
                     </div>
-                  )
-                }
+                  </div>
+                )
               }
-            )}
-          </div>
-
-
-          <div className={Styles.flexContainer}>
-            {data !== "" && data.map((item, i) => {
-                if (i > Math.floor(this.state.page_no / 3) && i <= 2 * Math.floor(this.state.page_no / 3)) {
-                  return (
-                    <div key={i}>
-                      <a href={item.src.original} target="_blank" rel="noopener noreferrer">
-                        <img className={Styles.img} width="100%" src={item.src.large} alt="img">
-                        </img>
-                      </a>
-                      <div className={Styles.details}>
-                        <a href={item.photographer_url} target="_blank" rel="noopener noreferrer">
-                          <h3>{item.photographer}</h3>
-                        </a>
-                      </div>
-                    </div>
-                  )
-                }
-              }
+            }
             )}
           </div>
 
           <div className={Styles.flexContainer}>
             {data !== "" && data.map((item, i) => {
-                if (i > 2 * Math.floor(this.state.page_no / 3)) {
-                  return (
-                    <div key={i}>
-                      <a href={item.src.original} target="_blank" rel="noopener noreferrer">
-                        <img className={Styles.img} width="100%" src={item.src.medium} alt="img">
-                        </img>
+              if (i > Math.floor(this.state.page_no / 3) && i <= 2 * Math.floor(this.state.page_no / 3)) {
+                return (
+                  <div key={i}>
+                    <a href={item.src.original} target="_blank" rel="noopener noreferrer">
+                      <img className={Styles.img} width="100%" src={item.src.large} alt="img">
+                      </img>
+                    </a>
+                    <div className={Styles.details}>
+                      <a href={item.photographer_url} target="_blank" rel="noopener noreferrer">
+                        <h3>{item.photographer}</h3>
                       </a>
-                      <div className={Styles.details}>
-                        <a href={item.photographer_url} target="_blank" rel="noopener noreferrer">
-                          <h3>{item.photographer}</h3>
-                        </a>
-                      </div>
                     </div>
-                  )
-                }
+                  </div>
+                )
               }
+            }
+            )}
+          </div>
+
+          <div className={Styles.flexContainer}>
+            {data !== "" && data.map((item, i) => {
+              if (i > 2 * Math.floor(this.state.page_no / 3)) {
+                return (
+                  <div key={i}>
+                    <a href={item.src.original} target="_blank" rel="noopener noreferrer">
+                      <img className={Styles.img} width="100%" src={item.src.medium} alt="img">
+                      </img>
+                    </a>
+                    <div className={Styles.details}>
+                      <a href={item.photographer_url} target="_blank" rel="noopener noreferrer">
+                        <h3>{item.photographer}</h3>
+                      </a>
+                    </div>
+                  </div>
+                )
+              }
+            }
             )}
           </div>
         </div>
+
+
+         <Footer />
       </div>
+
     )
   }
 }
 
 export default Photos
+
