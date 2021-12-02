@@ -89,12 +89,6 @@ class Photos extends React.Component {
 
         </Container>
 
-        {/*<div className={Styles.input_container}>*/}
-        {/*  <h1>The best free stock photos</h1>*/}
-        {/*  <input type="text" onChange={this.handleChange} value={this.state.value} placeholder="Search for free photos"></input>*/}
-
-        {/*  <button type="button" onClick={this.handleClick}>Search</button>*/}
-        {/*</div>*/}
 
         <div className={Styles.photo_container}>
 
