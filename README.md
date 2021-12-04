@@ -21,7 +21,7 @@ Pexel Clone Project
 
 ## Inicializar o projeito
 
-1. Run `npm install` or `yarn install`.<br />]
+1. Run `npm install` or `yarn install`.<br />
 2. Configurar o arquivo .env com as informações de acesso a API do Pexels.<br />
 3. Run `yarn start` and access `http://localhost:3000`.<br />
 

@@ -23,34 +23,30 @@
 }
 
 .input_container button{
-    margin-left: 400px;
-    padding: 10px;
-    height: 55px;
-    /*position: absolute;*/
+    background: white;
+    color: #2D4B2D;
+    opacity: 0.8;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    padding: 13px 30px;
+    border-radius: 10px;
 
-    font-size: 24px;
-    background-color: #1cb397;
-    color: white;
-    border-radius:3px;
-    font-weight: bolder;
-    border: none;
-    cursor:pointer;
-    width: 250px;
+    cursor: pointer;
+    margin: 0 0 0 10px
 
 }
 
 .input_container input{
 
     max-width: 260px;
-    width: 90%;
+    width: 100%;
     margin: auto;
     background: #2D4B2D;
     outline: 0;
     border-radius: 6px;
     padding: 12px 12px;
-
-
-
 }
 
 .input_container h1{

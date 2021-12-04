@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, SearchForm, PexelLogo } from './styles';
+import { Container, SearchForm, PexelLogo, ButtonsHeader } from './styles';
 import { useNavigate } from 'react-router-dom'
 
 const Header: React.FC = () => {
@@ -15,15 +15,15 @@ const Header: React.FC = () => {
 
   return (
       <Container>
-
         <PexelLogo />
-
         <SearchForm onSubmit={handleSubmit} >
             <input placeholder="Search for free photos..."
                    value={search}
                    onChange={e => setSearch(e.currentTarget.value)}
             />
+            <ButtonsHeader />
         </SearchForm>
+
       </Container>
   );
 };

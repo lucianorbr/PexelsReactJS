@@ -1,16 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import '../src/styles/index.css';
-import Photos from './Photos';
-
+import App from "./App";
 
 
 ReactDOM.render(
-
-
-    <Photos />, 
-
-
+    <App />,
   document.getElementById('root')
 );
 

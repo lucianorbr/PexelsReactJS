@@ -1,11 +1,16 @@
 import React from 'react';
 
-import { Container } from './styles';
+import { Container, Buttons } from './styles';
+
+
 
 const Button: React.FC = () => {
     return (
     <Container>
-      Button
+      <Buttons>
+        <button>Prev</button>
+        <button>Next</button>
+      </Buttons>
     </Container>
   );
 }
