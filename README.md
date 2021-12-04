@@ -3,7 +3,7 @@ Pexel Clone Project
 </h1>
 
 <p align="center">Projeto diciplicar.</p>
-<p align="center">Deployed <a href="https://rocketseat-clone-github.netlify.app/">here</a>.</p>
+<p align="center">Deployed <a href="">here</a>.</p>
 
 
 
