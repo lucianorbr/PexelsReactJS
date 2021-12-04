@@ -13,6 +13,8 @@ Pexel Clone Project
 
 [Luciano Ribeiro](https://github.com/lucianorbr)
 
+![img.png](img.png)
+
 ## Tecnologias
 
 - [x] React.js

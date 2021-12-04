@@ -1,31 +1,33 @@
-import React, { useState } from 'react';
-import { Container, SearchForm, PexelLogo, ButtonsHeader } from './styles';
-import { useNavigate } from 'react-router-dom'
+import React, {useState} from 'react';
+import {Container, Header, SearchForm, PexelLogo, ButtonsHeader, Burger} from './styles';
+import {useNavigate} from 'react-router-dom'
 
-const Header: React.FC = () => {
+
+const UniqueOverlay: React.FC = () => {
     const [search, setSearch] = useState('');
     const navigate = useNavigate();
 
     function handleSubmit(event: React.FormEvent) {
         event.preventDefault();
-        // console.log(search);
+        console.log(search);
 
-        navigate('/' + search.toLowerCase().trim());
     }
 
-  return (
-      <Container>
-        <PexelLogo />
-        <SearchForm onSubmit={handleSubmit} >
-            <input placeholder="Search for free photos..."
-                   value={search}
-                   onChange={e => setSearch(e.currentTarget.value)}
-            />
-            <ButtonsHeader />
-        </SearchForm>
-
-      </Container>
-  );
+    return (
+        <Container>
+            <Header>
+              <PexelLogo/>
+                <SearchForm onSubmit={handleSubmit}>
+                    <input placeholder="Search for free photos..."
+                           value={search}
+                           onChange={e => setSearch(e.currentTarget.value)}
+                    />
+                    <ButtonsHeader/>
+                </SearchForm>
+              <Burger/>
+            </Header>
+        </Container>
+    );
 };
 
-export default Header;
+export default UniqueOverlay;
