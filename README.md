@@ -15,6 +15,8 @@ Pexel Clone Project
 
 ![img.png](img.png)
 
+![img_1.png](img_1.png)
+
 ## Tecnologias
 
 - [x] React.js
