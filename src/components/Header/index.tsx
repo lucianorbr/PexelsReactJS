@@ -10,7 +10,6 @@ const UniqueOverlay: React.FC = () => {
     function handleSubmit(event: React.FormEvent) {
         event.preventDefault();
         console.log(search);
-
     }
 
     return (
@@ -18,7 +17,7 @@ const UniqueOverlay: React.FC = () => {
             <Header>
               <PexelLogo/>
                 <SearchForm onSubmit={handleSubmit}>
-                    <input placeholder="Search for free photos..."
+                    <input  placeholder="Search for free photos..."
                            value={search}
                            onChange={e => setSearch(e.currentTarget.value)}
                     />

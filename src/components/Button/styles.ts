@@ -83,7 +83,4 @@ export const Buttons = styled.div`
       }
     }
   }
-  
-
-
 `;
