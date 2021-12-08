@@ -22,6 +22,7 @@ Pexel Clone Project
 - [x] React.js
 - [x] Styled Components
 - [x] TypeScript
+- [x] Material-UI
 
 ## Inicializar o projeito
 

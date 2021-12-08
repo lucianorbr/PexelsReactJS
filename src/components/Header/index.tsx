@@ -3,7 +3,7 @@ import {Container, Header, SearchForm, PexelLogo, ButtonsHeader, Burger} from '.
 import {useNavigate} from 'react-router-dom'
 
 
-const UniqueOverlay: React.FC = () => {
+const UniqueOverlay: React.FC = (props) => {
     const [search, setSearch] = useState('');
     const navigate = useNavigate();
 

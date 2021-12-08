@@ -5,14 +5,11 @@ import {BurgerSVG} from "./IconSVG";
 export const Container = styled.div`
   display: flex;
   align-items: center;
+  background: var(--header);
   background: #2D4B2D;
-  padding: 11px 16px;
+  //padding: 11px 16px;
   width: 100%;
-  height: 100px;
-  top: 0;
-  left: 0;
-  right: 0;
-  
+  height: 150px;
 `;
 
 export const Header = styled.header`
@@ -23,7 +20,6 @@ export const Header = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
   padding: 0 20px;
   min-height: 110px;
 `
@@ -32,10 +28,7 @@ export const Burger = styled(BurgerSVG)`
   width: 42px;
   height: 42px;
   cursor: pointer;
-  
   padding-right: 5px;
-  
-    
 `;
 
 export const PexelLogo = styled(SiPexels)`
@@ -44,8 +37,7 @@ export const PexelLogo = styled(SiPexels)`
   height: 85px;
   cursor: pointer;
   flex-shrink: 0;
-  
-  
+  padding: 0 10px ;
 `;
 
 export const Button = styled.button`
@@ -60,8 +52,6 @@ export const Button = styled.button`
   border-radius: 10px;
   cursor: pointer;
   margin-top: 1px;
-
-  
 `;
 
 export const SearchForm = styled.form`
@@ -73,10 +63,7 @@ export const SearchForm = styled.form`
     border-radius: 6px;
     padding: 7px 12px;
     width: 95%;
-    
     font-size: 22px;
-   
-   
 `;
 
 export const ButtonsHeader = styled.div`
