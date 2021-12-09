@@ -10,6 +10,7 @@ import Pagination from '@material-ui/lab/Pagination';
 
 require('dotenv/config');
 
+
 const Ap = () => {
     const [photos, setPhotos] = useState('');
     const [loading, setLoading] = useState(true);
@@ -49,22 +50,26 @@ const Ap = () => {
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
-                height: '100vh'
+                height: '100vh',
             }}>
-                <CircularProgress size={140}/>;
+
+                <CircularProgress
+                    size={140}
+                    color="black"
+
+                />;
             </div>)
 
     return (
         <Container>
             <Cont>
                 <PexelLogo/>
-                <SearchForm>
                     <Input
                         change={handleChange}
                         submit={handleSubmit}
                         placeholder="Search for free photos..."
                     />
-                </SearchForm>
+
             </Cont>
             <div
                 style={{
@@ -74,6 +79,8 @@ const Ap = () => {
                 }}
             >
                 <Pagination
+                    variant="outlined"
+                    shape="rounded"
                     count={20}
                     size="large"
                     onChange={pageChange}
@@ -89,6 +96,8 @@ const Ap = () => {
                 }}
             >
                 <Pagination
+                    variant="outlined"
+                    shape="rounded"
                     count={20}
                     size="large"
                     onChange={pageChange}

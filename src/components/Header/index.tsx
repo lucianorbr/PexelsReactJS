@@ -16,7 +16,8 @@ const UniqueOverlay: React.FC = (props) => {
         <Container>
             <Header>
               <PexelLogo/>
-                <SearchForm onSubmit={handleSubmit}>
+                <SearchForm
+                    onSubmit={handleSubmit}>
                     <input  placeholder="Search for free photos..."
                            value={search}
                            onChange={e => setSearch(e.currentTarget.value)}

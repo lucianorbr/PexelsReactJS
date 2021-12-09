@@ -7,7 +7,7 @@ import GridListTileBar from "@material-ui/core/GridListTileBar";
 const Gallery = (props) => {
     return (
         <div>
-            <GridList cellHeight={375} cols={4}>
+            <GridList cellHeight={400} cols={4}>
                 {props.photos.map((img) => (
                     <GridListTitle
                         style={{flexGrow: '1'}}
