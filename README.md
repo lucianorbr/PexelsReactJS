@@ -1,5 +1,6 @@
-<div align="center">
-  <img alt="Header" src=".github/assets/Header.png" />
+<p align="center">
+  <img alt="Footer" src="./.github/assets/Header.png">
+</p>
 
 <p align="center">
   <img alt="Footer" src="./.github/assets/Footer.png">
@@ -23,6 +24,8 @@ Pexel Clone Project
 - [x] Material-UI
 
 ## Inicializar o projeito
+
+## 🚀 Getting started
 
 ```bash
 # Clone this repository
