@@ -23,8 +23,6 @@ Pexel Clone Project
 - [x] TypeScript
 - [x] Material-UI
 
-## Inicializar o projeito
-
 ## 🚀 Getting started
 
 ```bash
