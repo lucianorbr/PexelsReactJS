@@ -1,21 +1,19 @@
+<div align="center">
+  <img width="300" alt="NextJS-ChakraUI" src=".github/assets/Header.png" />
+
+<p align="center">
+  <img alt="Rocketseat" src="./.github/assets/Footer.png">
+</p>
+
 <h1 align="center">
 Pexel Clone Project
 </h1>
 
 <p align="center">Projeto diciplicar.</p>
-<p align="center">Deployed <a href="">here</a>.</p>
-
-
-
-<hr>
 
 ## Participantes
 
 [Luciano Ribeiro](https://github.com/lucianorbr)
-
-![img.png](img.png)
-
-![img_1.png](img_1.png)
 
 ## Tecnologias
 
@@ -26,9 +24,16 @@ Pexel Clone Project
 
 ## Inicializar o projeito
 
-1. Run `npm install` or `yarn install`.<br />
-2. Configurar o arquivo .env com as informações de acesso a API do Pexels.<br />
-3. Run `yarn start` and access `http://localhost:3000`.<br />
+```bash
+# Clone this repository
+$ git clone https://github.com/lucianorbr/PexelsReactJS
+# Access the repository
+$ cd PexelsReactJS
+# Install the dependencies
+$ yarn install
+# Run application
+$ yarn dev
+```
 
 ## O Projeito
 - Minha tarefa consiste em criar um site para um álbum de fotos:
