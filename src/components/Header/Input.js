@@ -19,6 +19,7 @@ const Input = (props) => {
                 onChange={props.change}
                 style={{
                     width: '100%',
+                    color: '#fff',
                 }}
             />
         </form>
