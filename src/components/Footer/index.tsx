@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
             <Line />
             <ul>
                 <li>
-                    <a href="#">Home</a>
+                    <a href="/">Home</a>
                 </li>
                 <li>
                     <a href="https://www.pexels.com/pt-br/collections/old-photos-3h3ftxp/">Discover</a>
