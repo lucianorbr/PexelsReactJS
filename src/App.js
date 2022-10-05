@@ -57,7 +57,7 @@ const Ap = () => {
                     size={140}
                     color="black"
 
-                />;
+                />
             </div>)
 
     return (
