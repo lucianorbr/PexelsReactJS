@@ -10,7 +10,7 @@
 Pexel Clone Project
 </h1>
 
-<p align="center">Projeto diciplicar.</p>
+<p align="center">Projeto disciplinar.</p>
 
 ## Participantes
 
